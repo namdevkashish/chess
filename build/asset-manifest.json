@@ -1,0 +1,36 @@
+{
+  "files": {
+    "main.css": "/chess/static/css/main.e4684ce4.css",
+    "main.js": "/chess/static/js/main.0dfacacd.js",
+    "static/js/787.497f1025.chunk.js": "/chess/static/js/787.497f1025.chunk.js",
+    "static/media/error_boundary.png": "/chess/static/media/error_boundary.9beb159aaf2de78319d6.png",
+    "static/media/wqueen.png": "/chess/static/media/wqueen.c160babbb337a226bb19.png",
+    "static/media/bking.png": "/chess/static/media/bking.820a2e47b9416d912a3b.png",
+    "static/media/bqueen.png": "/chess/static/media/bqueen.fd372f81fa144c816e93.png",
+    "static/media/wking.png": "/chess/static/media/wking.20c79720a565ec2a833b.png",
+    "static/media/wknight.png": "/chess/static/media/wknight.dd52e6ac0390b126c7ca.png",
+    "static/media/wbishop.png": "/chess/static/media/wbishop.caf7d0b31c58940a543a.png",
+    "static/media/bknight.png": "/chess/static/media/bknight.00f6f843129ca8269b40.png",
+    "static/media/wpawn.png": "/chess/static/media/wpawn.f55a415c18ba807417cb.png",
+    "static/media/bbishop.png": "/chess/static/media/bbishop.c60ab77d2e1ee2d7c620.png",
+    "static/media/bpawn.png": "/chess/static/media/bpawn.76d358132193f4aa5914.png",
+    "static/media/light_mode.svg": "/chess/static/media/light_mode.6940108f0845d2e5338a.svg",
+    "static/media/numbers.svg": "/chess/static/media/numbers.7210ecefc12875725acb.svg",
+    "static/media/info.svg": "/chess/static/media/info.2be254fda841bbcb7436.svg",
+    "static/media/setting.svg": "/chess/static/media/setting.eaf21f01b72f2d0cb803.svg",
+    "static/media/keyboard.svg": "/chess/static/media/keyboard.25667a4d63b27f961e78.svg",
+    "index.html": "/chess/index.html",
+    "static/media/dark_mode.svg": "/chess/static/media/dark_mode.637f3a0ac235a990fa34.svg",
+    "static/media/more.svg": "/chess/static/media/more.f2acbf2e67be865530c8.svg",
+    "static/media/undo_black_24dp.svg": "/chess/static/media/undo_black_24dp.70c7fd7994561db1d41f.svg",
+    "static/media/close.svg": "/chess/static/media/close.244b66874c46718f7e06.svg",
+    "static/media/arrow_forward_ios_black_24dp.svg": "/chess/static/media/arrow_forward_ios_black_24dp.18aa13bdbb4c62eb4865.svg",
+    "main.e4684ce4.css.map": "/chess/static/css/main.e4684ce4.css.map",
+    "main.0dfacacd.js.map": "/chess/static/js/main.0dfacacd.js.map",
+    "787.497f1025.chunk.js.map": "/chess/static/js/787.497f1025.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e4684ce4.css",
+    "static/js/main.0dfacacd.js"
+  ]
+}

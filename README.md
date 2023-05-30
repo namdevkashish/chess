@@ -1,6 +1,7 @@
 # React Chess Game
 
 Welcome to the React Chess Game! This is a web-based chess game built with React. It allows two players to play a game of chess against each other in a browser.
+<br>
 Demo - [Chess Game](https://namdevkashish.github.io/chess/)
 
 ## Features

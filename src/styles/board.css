@@ -1,0 +1,335 @@
+
+.board {
+	display: block;
+	width: calc(var(--side) * 8 + 0.25rem);
+	height: calc(var(--side) * 8 + 0.25rem);
+	margin: 3rem auto 0 auto;
+	border-collapse: collapse;
+	border: 2px solid var(--medium-blue-gray);
+	background-color: rgb(201, 176, 204);
+	box-shadow: rgb(76, 37, 80) 0px 12px 28px 0px, rgb(76, 37, 80) 0px 2px 4px 0px, rgb(76, 37, 80) 0px 0px 0px 1px inset;
+}
+
+.board .square {
+	display: inline-block;
+	width: var(--side);
+	height: var(--side);
+	overflow: hidden;
+}
+
+.board tr:nth-child(odd) td:nth-child(even) {
+	background: linear-gradient(45deg, rgb(117, 59, 123), rgb(117, 59, 123), rgb(117, 59, 123));
+}
+
+.board tr:nth-child(even) td:nth-child(odd) {
+	background: linear-gradient(45deg, rgb(117, 59, 123), rgb(117, 59, 123), rgb(117, 59, 123));
+}
+
+.figure {
+	position: relative;
+	display: block;
+	width: 100%;
+	height: 100%;
+	background-size: 75%;
+	background-repeat: no-repeat;
+	background-position: center;
+	image-rendering: -webkit-optimize-contrast;
+	transition: all 0.2s ease;
+	-webkit-transition: all 0.2s ease;
+	-moz-transition: all 0.2s ease;
+	-ms-transition: all 0.2s ease;
+	-o-transition: all 0.2s ease;
+	z-index: 5;
+}
+
+body.plain-style .figure.black.king {
+	background-image: url(../images/plain_pieces/bking.png);
+}
+
+body.plain-style .figure.black.queen {
+	background-image: url(../images/plain_pieces/bqueen.png);
+}
+
+body.plain-style .figure.black.bishop {
+	background-image: url(../images/plain_pieces/bbishop.png);
+}
+
+body.plain-style .figure.black.knight {
+	background-image: url(../images/plain_pieces/bknight.png);
+}
+
+body.plain-style .figure.black.rook {
+	background-image: url(../images/plain_pieces/brook.png);
+}
+
+body.plain-style .figure.black.pawn {
+	background-image: url(../images/plain_pieces/bpawn.png);
+	background-size: 80%;
+	background-position: center 20%;
+}
+
+body.plain-style .figure.white.king {
+	background-image: url(../images/plain_pieces/wking.png);
+}
+
+body.plain-style .figure.white.queen {
+	background-image: url(../images/plain_pieces/wqueen.png);
+}
+
+body.plain-style .figure.white.bishop {
+	background-image: url(../images/plain_pieces/wbishop.png);
+}
+
+body.plain-style .figure.white.knight {
+	background-image: url(../images/plain_pieces/wknight.png);
+}
+
+body.plain-style .figure.white.rook {
+	background-image: url(../images/plain_pieces/wrook.png);
+}
+
+body.plain-style .figure.white.pawn {
+	background-image: url(../images/plain_pieces/wpawn.png);
+	background-size: 80%;
+	background-position: center 20%;
+}
+
+
+body.fancy-style .figure.black.king {
+	background-image: url(../images/styled_pieces/bking.png);
+	background-size: 65%;
+}
+
+body.fancy-style .figure.black.queen {
+	background-image: url(../images/styled_pieces/bqueen.png);
+	background-size: 65%;
+}
+
+body.fancy-style .figure.black.bishop {
+	background-image: url(../images/styled_pieces/bbishop.png);
+	background-size: 65%;
+}
+
+body.fancy-style .figure.black.knight {
+	background-image: url(../images/styled_pieces/bknight.png);
+}
+
+body.fancy-style .figure.black.rook {
+	background-image: url(../images/styled_pieces/brook.png);
+}
+
+body.fancy-style .figure.black.pawn {
+	background-image: url(../images/styled_pieces/bpawn.png);
+}
+
+body.fancy-style .figure.white.king {
+	background-image: url(../images/styled_pieces/wking.png);
+	background-size: 65%;
+}
+
+body.fancy-style .figure.white.queen {
+	background-image: url(../images/styled_pieces/wqueen.png);
+	background-size: 65%;
+}
+
+body.fancy-style .figure.white.bishop {
+	background-image: url(../images/styled_pieces/wbishop.png);
+}
+
+body.fancy-style .figure.white.knight {
+	background-image: url(../images/styled_pieces/wknight.png);
+}
+
+body.fancy-style .figure.white.rook {
+	background-image: url(../images/styled_pieces/wrook.png);
+}
+
+body.fancy-style .figure.white.pawn {
+	background-image: url(../images/styled_pieces/wpawn.png);
+}
+
+.figure::before {
+	content: "";
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+	background-size: 75%;
+	background-repeat: no-repeat;
+	background-position: center;
+	image-rendering: -webkit-optimize-contrast;
+	opacity: 0;
+	transition: opacity 0.3s ease !important;
+	-webkit-transition: opacity 0.3s ease !important;
+	-moz-transition: opacity 0.3s ease !important;
+	-ms-transition: opacity 0.3s ease !important;
+	-o-transition: opacity 0.3s ease !important;
+}
+
+.selected .figure {
+	transform: scale(1.1);
+	-webkit-transform: scale(1.1);
+	-moz-transform: scale(1.1);
+	-ms-transform: scale(1.1);
+	-o-transform: scale(1.1);
+}
+
+.indicate .figure::before {
+	opacity: 0.5;
+}
+
+body.plain-style .indicate.white.king .figure::before {
+	background-image: url(../images/plain_pieces/wking.png);
+	background-size: 65%;
+}
+
+body.plain-style .indicate.white.queen .figure::before {
+	background-image: url(../images/plain_pieces/wqueen.png);
+	background-size: 65%;
+}
+
+body.plain-style .indicate.white.bishop .figure::before {
+	background-image: url(../images/plain_pieces/wbishop.png);
+}
+
+body.plain-style .indicate.white.rook .figure::before {
+	background-image: url(../images/plain_pieces/wrook.png);
+}
+
+body.plain-style .indicate.white.knight .figure::before {
+	background-image: url(../images/plain_pieces/wknight.png);
+}
+
+body.plain-style .indicate.white.pawn .figure::before {
+	background-image: url(../images/plain_pieces/wpawn.png);
+	background-size: 80%;
+	background-position: center 20%;
+}
+
+body.plain-style .indicate.black.king .figure::before {
+	background-image: url(../images/plain_pieces/bking.png);
+}
+
+body.plain-style .indicate.black.queen .figure::before {
+	background-image: url(../images/plain_pieces/bqueen.png);
+}
+
+body.plain-style .indicate.black.bishop .figure::before {
+	background-image: url(../images/plain_pieces/bbishop.png);
+}
+
+body.plain-style .indicate.black.rook .figure::before {
+	background-image: url(../images/plain_pieces/brook.png);
+}
+
+body.plain-style .indicate.black.knight .figure::before {
+	background-image: url(../images/plain_pieces/bknight.png);
+}
+
+body.plain-style .indicate.black.pawn .figure::before {
+	background-image: url(../images/plain_pieces/bpawn.png);
+	background-size: 80%;
+	background-position: center 20%;
+}
+
+body.fancy-style .indicate.white.king .figure::before {
+	background-image: url(../images/styled_pieces/wking.png);
+	background-size: 65%;
+}
+
+body.fancy-style .indicate.white.queen .figure::before {
+	background-image: url(../images/styled_pieces/wqueen.png);
+	background-size: 65%;
+}
+
+body.fancy-style .indicate.white.bishop .figure::before {
+	background-image: url(../images/styled_pieces/wbishop.png);
+}
+
+body.fancy-style .indicate.white.rook .figure::before {
+	background-image: url(../images/styled_pieces/wrook.png);
+}
+
+body.fancy-style .indicate.white.knight .figure::before {
+	background-image: url(../images/styled_pieces/wknight.png);
+}
+
+body.fancy-style .indicate.white.pawn .figure::before {
+	background-image: url(../images/styled_pieces/wpawn.png);
+}
+
+body.fancy-style .indicate.black.king .figure::before {
+	background-image: url(../images/styled_pieces/bking.png);
+	background-size: 65%;
+}
+
+body.fancy-style .indicate.black.queen .figure::before {
+	background-image: url(../images/styled_pieces/bqueen.png);
+	background-size: 65%;
+}
+
+body.fancy-style .indicate.black.bishop .figure::before {
+	background-image: url(../images/styled_pieces/bbishop.png);
+	background-size: 65%;
+}
+
+body.fancy-style .indicate.black.rook .figure::before {
+	background-image: url(../images/styled_pieces/brook.png);
+}
+
+body.fancy-style .indicate.black.knight .figure::before {
+	background-image: url(../images/styled_pieces/bknight.png);
+}
+
+body.fancy-style .indicate.black.pawn .figure::before {
+	background-image: url(../images/styled_pieces/bpawn.png);
+}
+
+button.open-piece-pos {
+	position: absolute;
+	top: 1.15rem;
+	right: 15rem;
+	background-image: url(../images/numbers.svg);
+}
+
+.piece-pos {
+	position: relative;
+	margin-top: -100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	background-color: #22222a85;
+	color: #eee;
+	z-index: 10;
+	opacity: 0;
+	transform: scale(0);
+	border-radius: 50%;
+	transition: all 0.5s ease;
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-ms-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	-webkit-transform: scale(0);
+	-moz-transform: scale(0);
+	-ms-transform: scale(0);
+	-o-transform: scale(0);
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	-ms-border-radius: 50%;
+	-o-border-radius: 50%;
+}
+
+body.open-piece-pos .piece-pos {
+	opacity: 1;
+	border-radius: 0%;
+	transform: scale(1);
+	-webkit-transform: scale(1);
+	-moz-transform: scale(1);
+	-ms-transform: scale(1);
+	-o-transform: scale(1);
+	-webkit-border-radius: 0%;
+	-moz-border-radius: 0%;
+	-ms-border-radius: 0%;
+	-o-border-radius: 0%;
+}
